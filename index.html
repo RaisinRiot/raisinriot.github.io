@@ -195,6 +195,43 @@
             border-bottom-color: #4ecdc4;
             transform: translateX(5px);
         }
+
+        /* Audio Players */
+        .audio-player-container {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .track-item {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(0, 212, 255, 0.05);
+            border-radius: 10px;
+            border-left: 4px solid #00d4ff;
+        }
+
+        .track-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .track-item h3 {
+            color: #4ecdc4;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .track-description {
+            color: #a0a0a0;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        audio {
+            filter: sepia(20%) saturate(70%) hue-rotate(180deg) brightness(80%);
+        }
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -347,55 +384,41 @@
     <!-- Portfolio Section -->
     <section id="portfolio">
         <div class="container">
-            <h2 class="section-title">Featured Tracks from SoundCloud</h2>
+            <h2 class="section-title">Featured Demos</h2>
             <p style="text-align: center; margin-bottom: 40px; color: #a0a0a0;">Listen to my latest game music compositions</p>
             
-            <!-- SoundCloud Embedded Player -->
-            <div style="text-align: center; margin-bottom: 60px;">
-                <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" 
-                    src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/raisinriot&color=%2300d4ff&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
-                </iframe>
-                <div style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight: 100;">
-                    <a href="https://soundcloud.com/raisinriot" title="RaisinRiot" target="_blank" style="color: #cccccc; text-decoration: none;">RaisinRiot</a>
-                </div>
-            </div>
-            
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <span class="genre">Epic Fantasy</span>
-                    <h3>[Replace with your Epic/Orchestral track name]</h3>
-                    <p>Epic orchestral composition perfect for fantasy RPGs and adventure games. Features sweeping melodies and heroic themes.</p>
-                    <a href="https://soundcloud.com/raisinriot" target="_blank" class="listen-link">Listen on SoundCloud →</a>
-                </div>
-                <div class="portfolio-item">
-                    <span class="genre">Electronic/Synth</span>
-                    <h3>[Replace with your Electronic track name]</h3>
-                    <p>Modern electronic soundtrack with pulsing synths and atmospheric pads, ideal for sci-fi and cyberpunk games.</p>
-                    <a href="https://soundcloud.com/raisinriot" target="_blank" class="listen-link">Listen on SoundCloud →</a>
-                </div>
-                <div class="portfolio-item">
-                    <span class="genre">Ambient/Atmospheric</span>
-                    <h3>[Replace with your Ambient track name]</h3>
-                    <p>Immersive ambient soundscape that creates emotional depth and enhances exploration gameplay.</p>
-                    <a href="https://soundcloud.com/raisinriot" target="_blank" class="listen-link">Listen on SoundCloud →</a>
-                </div>
-                <div class="portfolio-item">
-                    <span class="genre">Action/Intense</span>
-                    <h3>[Replace with your Action track name]</h3>
-                    <p>High-energy composition with driving rhythms and intense orchestration, perfect for combat and action sequences.</p>
-                    <a href="https://soundcloud.com/raisinriot" target="_blank" class="listen-link">Listen on SoundCloud →</a>
-                </div>
-                <div class="portfolio-item">
-                    <span class="genre">Chill/Relaxed</span>
-                    <h3>[Replace with your Chill track name]</h3>
-                    <p>Soothing and contemplative piece ideal for puzzle games, menus, or peaceful exploration areas.</p>
-                    <a href="https://soundcloud.com/raisinriot" target="_blank" class="listen-link">Listen on SoundCloud →</a>
-                </div>
-                <div class="portfolio-item">
-                    <span class="genre">Latest Release</span>
-                    <h3>[Replace with your newest track name]</h3>
-                    <p>My latest composition showcasing current style and production techniques. Perfect example of recent work.</p>
-                    <a href="https://soundcloud.com/raisinriot" target="_blank" class="listen-link">Listen on SoundCloud →</a>
+            <!-- Audio Players Section -->
+            <div style="max-width: 800px; margin: 0 auto 60px auto;">
+                <div class="audio-player-container">
+                    <div class="track-item">
+                        <h3>[Your Track Name 1]</h3>
+                        <p class="track-description">Epic orchestral piece perfect for boss battles and climactic moments.</p>
+                        <audio controls style="width: 100%; margin: 15px 0;">
+                            <source src="audio/track1.wav" type="audio/wav">
+                            <source src="audio/track1.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                    
+                    <div class="track-item">
+                        <h3>[Your Track Name 2]</h3>
+                        <p class="track-description">Atmospheric ambient piece for exploration and world-building.</p>
+                        <audio controls style="width: 100%; margin: 15px 0;">
+                            <source src="audio/track2.wav" type="audio/wav">
+                            <source src="audio/track2.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                    
+                    <div class="track-item">
+                        <h3>[Your Track Name 3]</h3>
+                        <p class="track-description">High-energy electronic track for action sequences and combat.</p>
+                        <audio controls style="width: 100%; margin: 15px 0;">
+                            <source src="audio/track3.wav" type="audio/wav">
+                            <source src="audio/track3.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
                 </div>
             </div>
         </div>
