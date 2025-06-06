@@ -275,62 +275,19 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 8rem;
-            color: white;
             margin: 0 auto;
+            overflow: hidden;
+            border: 4px solid rgba(255, 255, 255, 0.1);
         }
 
-        /* Contact */
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .form-group {
-            margin-bottom: 25px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            color: #4ecdc4;
-        }
-
-        .form-group input,
-        .form-group textarea {
+        .about-image img {
             width: 100%;
-            padding: 15px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 10px;
-            color: white;
-            font-size: 1rem;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
         }
 
-        .form-group input::placeholder,
-        .form-group textarea::placeholder {
-            color: rgba(255, 255, 255, 0.5);
-        }
-
-        .submit-btn {
-            width: 100%;
-            padding: 15px;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-            border: none;
-            border-radius: 10px;
-            color: white;
-            font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);
-        }
-
-        /* Floating Elements */
+/* Floating Elements */
         .floating-note {
             position: absolute;
             font-size: 2rem;
@@ -374,7 +331,8 @@
     <nav>
         <div class="container">
             <ul>
-                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#portfolio">Demos</a></li>
+                <li><a href="#soundcloud">SoundCloud</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -391,8 +349,8 @@
             <div style="max-width: 800px; margin: 0 auto 60px auto;">
                 <div class="audio-player-container">
                     <div class="track-item">
-                        <h3>[Your Track Name 1]</h3>
-                        <p class="track-description">Epic orchestral piece perfect for boss battles and climactic moments.</p>
+                        <h3>Demo 1</h3>
+    
                         <audio controls style="width: 100%; margin: 15px 0;">
                             <source src="audio/track1.wav" type="audio/wav">
                             <source src="audio/track1.mp3" type="audio/mpeg">
@@ -401,8 +359,8 @@
                     </div>
                     
                     <div class="track-item">
-                        <h3>[Your Track Name 2]</h3>
-                        <p class="track-description">Atmospheric ambient piece for exploration and world-building.</p>
+                        <h3>Demo 2</h3>
+    
                         <audio controls style="width: 100%; margin: 15px 0;">
                             <source src="audio/track2.wav" type="audio/wav">
                             <source src="audio/track2.mp3" type="audio/mpeg">
@@ -411,8 +369,8 @@
                     </div>
                     
                     <div class="track-item">
-                        <h3>[Your Track Name 3]</h3>
-                        <p class="track-description">High-energy electronic track for action sequences and combat.</p>
+                        <h3>Demo 3</h3>
+    
                         <audio controls style="width: 100%; margin: 15px 0;">
                             <source src="audio/track3.wav" type="audio/wav">
                             <source src="audio/track3.mp3" type="audio/mpeg">
@@ -424,6 +382,28 @@
         </div>
     </section>
 
+    <!-- SoundCloud Section -->
+    <section id="soundcloud">
+        <div class="container">
+            <h2 class="section-title">Full Catalog on SoundCloud</h2>
+            <p style="text-align: center; margin-bottom: 40px; color: #a0a0a0;">Explore my complete library of game music compositions</p>
+            
+            <!-- SoundCloud Embedded Player -->
+            <div style="text-align: center; margin-bottom: 40px;">
+                <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" 
+                    src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/raisinriot/sets/raisinriot&color=%2300d4ff&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+                </iframe>
+                <div style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight: 100;">
+                    <a href="https://soundcloud.com/raisinriot/sets/raisinriot" title="RaisinRiot Playlist" target="_blank" style="color: #cccccc; text-decoration: none;">RaisinRiot</a>
+                </div>
+            </div>
+            
+            <div style="text-align: center;">
+                <a href="https://soundcloud.com/raisinriot" target="_blank" class="cta-button">Visit Full SoundCloud Profile</a>
+            </div>
+        </div>
+    </section>
+
 
 
     <!-- About Section -->
@@ -431,12 +411,14 @@
         <div class="container">
             <h2 class="section-title">About the Composer</h2>
             <div class="about-content">
-                <div class="about-image">🎵</div>
+                <div class="about-image">
+                    <img src="images/profile.jpg" alt="RaisinRiot Profile Photo">
+                </div>
                 <div>
-                    <p style="font-size: 1.2rem; margin-bottom: 30px;">With over 8 years of experience in game audio, I specialize in creating immersive musical experiences that enhance gameplay and storytelling.</p>
-                    <p style="margin-bottom: 20px;">My background combines classical training with modern production techniques, allowing me to work across diverse genres from orchestral epics to electronic soundscapes. I understand the unique challenges of interactive media and excel at creating music that serves the gameplay experience.</p>
-                    <p style="margin-bottom: 20px;"><strong>Technical Expertise:</strong> Pro Tools, Logic Pro, Cubase, Wwise, FMOD, Unity Audio, Unreal Engine Audio</p>
-                    <p><strong>Recent Collaborations:</strong> Worked with indie studios and AAA developers, contributing to titles across PC, console, and mobile platforms.</p>
+                    <p style="font-size: 1.2rem; margin-bottom: 30px;">I'm new to the game music development space but eager to get involved with projects and bring fresh creative energy to interactive media.</p>
+                    <p style="margin-bottom: 20px;">While I'm just starting my journey in game audio, I bring passion, dedication, and a keen ear for creating music that enhances gameplay experiences. I'm excited to collaborate with developers and learn from each project.</p>
+                    <p style="margin-bottom: 20px;"><strong>Primary DAW:</strong> Ableton Live</p>
+                    <p><strong>Looking for:</strong> Opportunities to work on indie games, game jams, and collaborative projects to build experience and create amazing soundtracks together.</p>
                 </div>
             </div>
         </div>
@@ -446,26 +428,22 @@
     <section id="contact">
         <div class="container">
             <h2 class="section-title">Let's Create Something Amazing</h2>
-            <div class="contact-form">
-                <form>
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="project">Project Type</label>
-                        <input type="text" id="project" name="project" placeholder="e.g., RPG, Puzzle Game, Action Platformer">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Project Details</label>
-                        <textarea id="message" name="message" rows="6" placeholder="Tell me about your game, the style of music you're looking for, timeline, and budget range..."></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Send Project Inquiry</button>
-                </form>
+            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <p style="font-size: 1.2rem; margin-bottom: 40px; color: #a0a0a0;">I can be contacted by:</p>
+                
+                <div style="margin-bottom: 30px;">
+                    <h3 style="color: #4ecdc4; margin-bottom: 15px;">Email:</h3>
+                    <a href="mailto:cameronraisinriot@gmail.com" style="color: #00d4ff; font-size: 1.1rem; text-decoration: none; border-bottom: 2px solid transparent; transition: all 0.3s ease;">
+                        cameronraisinriot@gmail.com
+                    </a>
+                </div>
+                
+                <div>
+                    <h3 style="color: #4ecdc4; margin-bottom: 15px;">SoundCloud:</h3>
+                    <a href="https://soundcloud.com/raisinriot" target="_blank" style="color: #00d4ff; font-size: 1.1rem; text-decoration: none; border-bottom: 2px solid transparent; transition: all 0.3s ease;">
+                        soundcloud.com/raisinriot
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -485,12 +463,6 @@
             });
         });
 
-        // Form submission handler
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your inquiry! I\'ll get back to you within 24 hours to discuss your project.');
-        });
-
         // Add some interactive hover effects
         document.querySelectorAll('.portfolio-item').forEach(item => {
             item.addEventListener('mouseenter', function() {
@@ -498,6 +470,18 @@
             });
             item.addEventListener('mouseleave', function() {
                 this.style.transform = 'translateY(0) rotateX(0)';
+            });
+        });
+
+        // Add hover effects to contact links
+        document.querySelectorAll('#contact a').forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                this.style.borderBottomColor = '#4ecdc4';
+                this.style.color = '#4ecdc4';
+            });
+            link.addEventListener('mouseleave', function() {
+                this.style.borderBottomColor = 'transparent';
+                this.style.color = '#00d4ff';
             });
         });
     </script>
